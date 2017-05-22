@@ -2,28 +2,95 @@
 <html>
   <head>
     <meta charset="utf-8">
-
     <!-- Chrome, Firefox OS and Opera -->
-    <meta name="theme-color" content="#4285f4">
+    <meta name="theme-color" content="#ffc000">
     <!-- Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#4285f4">
+    <meta name="msapplication-navbutton-color" content="#ffc000">
     <!-- iOS Safari -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="#4285f4">
-
-    <title>Fullscreen Scrolling</title>
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ffc000">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Integral design and Web development">
+    <meta name="keywords" content="HTML,CSS,Photoshop,Illustrator,Brand,Industrial design,UI,UX">
+    <meta name="author" content="Juan Cruz Budin">
+    <title>Fullscreen Scrolling</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/3.ico"/>
     <link rel="stylesheet" href="estilos.css"/>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,700" rel="stylesheet">
   </head>
+
   <body>
-    <div id="fullpage">
-      <div class="section uno">UNO</div>
-      <div class="section dos">DOS</div>
-      <div class="section uno">TRES</div>
-      <div class="section dos">CUATRO</div>
+
+    <div id="nav-menu">
+      <ul class="">
+        <li class="nav-item"><a id="about-btn" href="#about">about</a></li>
+        <li class="nav-item"><a id="what-i-do-btn" href="#what-i-do">what i do</a></li>
+        <li class="nav-item"><a href="#projects">projects</a></li>
+        <li class="nav-item"><a href="#contact">contact</a></li>
+      </ul>
     </div>
+
+      <div id="header">
+        <div class="container">
+          <a class="logo" href="#"><img src="img/logo.png" alt="Logo" width="46px"></a>
+          <h1><span class="hi">Hi.</span><br>I’m <span class="name">Juan Cruz</span>.<br>Industrial design<br>&amp Web Development.<br><span class="student">(student)</span></h1>
+          <a id="scroll-down-btn" href="#about">Scroll down</a>
+        </div>
+      </div>
+      <div id="about">
+        <div class="container">
+          <p>I’m a 23 years old boy from Argentina. Student of<br>industrial design in National University of Córdoba.<br>Also i’m a self-taught Front-end Developer.<br>I love create and learn new thing all the time.</p>
+        </div>
+      </div>
+      <div id="what-i-do">
+        <div class="container">
+          <div id="box-id" class="box">
+            <h3>Industrial Design</h3>
+            <p>Development of industrial projects from concept to manufacturing.</p>
+          </div>
+          <div class="box">
+            <h3>Industrial Design</h3>
+            <p>Development of industrial projects from concept to manufacturing.</p>
+          </div>
+          <div class="box">
+            <h3>Industrial Design</h3>
+            <p>Development of industrial projects from concept to manufacturing.</p>
+          </div>
+          <div class="box">
+            <h3>Industrial Design</h3>
+            <p>Development of industrial projects from concept to manufacturing.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container">TRES</div>
+
+      <div class="container">CUATRO</div>
+
+
+    <!--<script src="jquery.fullPage.js"></script>
+    <script src="fullPage.js"></script> -->
     <script src="jquery-3.2.1.min.js"></script>
-    <script src="jquery.fullPage.js"></script>
-    <script src="fullPage.js"></script>
+    <script src="noframework.waypoints.min.js"></script>
+	  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script src="efectos.js" type="text/javascript"></script>
+
+    <script>
+    window.sr = ScrollReveal();
+      sr.reveal('#header .container h1', {
+      duration: 2000,
+      origin:'left',
+      distance:'200px'
+    });
+
+    sr.reveal('#nav-menu', {
+      duration: 1000,
+      delay: 1000,
+      origin:'right'
+    })
+
+    </script>
   </body>
 </html>
