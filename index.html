@@ -16,62 +16,97 @@
     <title>Fullscreen Scrolling</title>
     <link rel="shortcut icon" type="image/x-icon" href="img/3.ico"/>
     <link rel="stylesheet" href="estilos.css"/>
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,700" rel="stylesheet">
   </head>
 
   <body>
 
-    <div id="nav-menu">
+    <nav id="nav-menu">
       <ul class="">
         <li class="nav-item"><a id="about-btn" href="#about">about</a></li>
+        <hr>
         <li class="nav-item"><a id="what-i-do-btn" href="#what-i-do">what i do</a></li>
-        <li class="nav-item"><a href="#projects">projects</a></li>
-        <li class="nav-item"><a href="#contact">contact</a></li>
+        <hr>
+        <li class="nav-item"><a id="projects-btn" href="#projects">projects</a></li>
+        <hr>
+        <li class="nav-item"><a id="contact-btn" href="#contact">contact</a></li>
       </ul>
-    </div>
+    </nav>
 
       <div id="header">
         <div class="container">
-          <a class="logo" href="#"><img src="img/logo.png" alt="Logo" width="46px"></a>
+          <div class="logo"></div>
           <h1><span class="hi">Hi.</span><br>I’m <span class="name">Juan Cruz</span>.<br>Industrial design<br>&amp Web Development.<br><span class="student">(student)</span></h1>
-          <a id="scroll-down-btn" href="#about">Scroll down</a>
+          <a id="scroll-down-btn" href="#about">Scroll down<i class="fa fa-angle-double-down fa-2x" aria-hidden="true"></i></a>
         </div>
       </div>
       <div id="about">
         <div class="container">
-          <p>I’m a 23 years old boy from Argentina. Student of<br>industrial design in National University of Córdoba.<br>Also i’m a self-taught Front-end Developer.<br>I love create and learn new thing all the time.</p>
+          <div class="avatar"></div>
+          <p>I’m a 23 years old boy from Argentina. Student of<br>industrial design in <span class="name">National University of Córdoba</span>.<br>Also i’m a self-taught Front-end Developer.<br>I love create and learn new thing all the time.</p>
         </div>
       </div>
       <div id="what-i-do">
         <div class="container">
-          <div id="box-id" class="box">
-            <h3>Industrial Design</h3>
+          <h3 id="box-id"><sup>01</sup>Industrial Design</h3>
+          <div class="box">
             <p>Development of industrial projects from concept to manufacturing.</p>
           </div>
+          <h3 id="box-ui"><sup>02</sup>UI/UX Design</h3>
           <div class="box">
-            <h3>Industrial Design</h3>
             <p>Development of industrial projects from concept to manufacturing.</p>
           </div>
+          <h3 id="box-wd"><sup>03</sup>Web Development</h3>
           <div class="box">
-            <h3>Industrial Design</h3>
             <p>Development of industrial projects from concept to manufacturing.</p>
           </div>
+          <h3 id="box-ci"><sup>04</sup>Corporate Identity</h3>
           <div class="box">
-            <h3>Industrial Design</h3>
             <p>Development of industrial projects from concept to manufacturing.</p>
           </div>
         </div>
       </div>
+      <div id="projects">
+        <div class="container">
 
+        </div>
+      </div>
+      <div id="contact">
+        <div class="container-dos">
+          <p>I'm always looking forward to new opportunities,<br>ping me if you got any.</p>
+          <a href="mailto:juancruz.budin@gmail.com">Get in touch</a>
+        </div>
+          <div id="social">
+            <a href="">
+              <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-dribbble fa-2x" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-behance fa-2x" aria-hidden="true"></i>
+            </a>
 
-      <div class="container">TRES</div>
+          </div>
+          <footer>
+            <p>Designed with <i class="fa fa-heart" aria-hidden="true"></i> in <strong>ARG</strong></p>
+          </footer>
 
-      <div class="container">CUATRO</div>
+      </div>
 
 
     <!--<script src="jquery.fullPage.js"></script>
     <script src="fullPage.js"></script> -->
+    <script src="https://use.fontawesome.com/053bea3297.js"></script>
     <script src="jquery-3.2.1.min.js"></script>
     <script src="noframework.waypoints.min.js"></script>
 	  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
@@ -89,6 +124,16 @@
       duration: 1000,
       delay: 1000,
       origin:'right'
+    });
+
+    sr.reveal('.logo', {
+      duration: 1000,
+      origin:'top'
+    });
+
+    sr.reveal('#scroll-down-btn', {
+      duration: 1000,
+      origin:'bottom'
     })
 
     </script>

@@ -2,9 +2,10 @@ body{
   margin: 0;
   padding: 0;
   font-family: 'Work Sans', sans-serif;
+  background: #F9F9F9;
 }
 .container{
-width: 920px;
+max-width: 920px;
 margin: 0 auto;
 height: 100vh;
 }
@@ -14,8 +15,8 @@ height: 100vh;
   position: fixed;
   text-align: right;
   float: right;
-  bottom: 140px;
-  right: 80px;
+  top: calc(50vh - 110px);
+  right: 2%;
   z-index: 2;
   display: block;
   text-decoration: none;
@@ -26,29 +27,29 @@ height: 100vh;
 }
 #nav-menu li{
   display: block;
-  margin: 20px 0;
-}
-#nav-menu li:last-child{
-  display: block;
-  margin: 20px 0 0 0;
 }
 #nav-menu li a{
-  color: #ccc;
+  color: #dddddd;
   font-size: 21px;
   text-transform: uppercase;
   text-decoration: none;
+  transition: .4s;
 }
 #nav-menu li a:hover{
   color: #4b4b4d;
-  font-size: 21px;
-  text-transform: uppercase;
-  text-decoration: none;
 }
-
+hr{
+width: 50px;
+float: right;
+margin: 20px 0;
+border-top: 1px solid #dddddd;
+}
+.activo{
+  color: #2c2c2c !important;
+  /*font-size: 24px !important;*/
+  font-weight: 700;
+}
 /*HEADER*/
-#header{
-  background: #F9F9F9;
-}
 #header .container {
   display: flex;
   flex-direction: column;
@@ -75,9 +76,9 @@ height: 100vh;
   display: block;
   position: absolute;
   left: 0;
-  bottom:10px;
+  bottom: 11px;
   width: 0;
-  height: 8px;
+  height: 15%;
   background-color: #ffc000;
   content: "";
   transition: width 0.2s;
@@ -89,12 +90,18 @@ height: 100vh;
 #header span.student{
   font-size: 36px;
   font-weight: 400;
+  color: #ffc000;
 }
 #header a{
   padding: 10px;
 }
-#header a.logo{
+#header .logo{
   margin: 50px auto 0 auto;
+  width: 36px;
+  height: 38px;
+  background: url('img/logo.svg');
+  background-repeat: no-repeat;
+  background-position: center;
 }
 a#scroll-down-btn{
   margin: 0 auto 50px auto;
@@ -109,9 +116,12 @@ a#scroll-down-btn:after{
   display: block;
   width: 0;
   height: 4px;
+  position: relative;
+  bottom: 38px;
   background-color: #ffc000;
   content: "";
   transition: width 0.2s;
+  z-index: -1;
 }
 a#scroll-down-btn:hover:after {
   width: 100%;
@@ -122,10 +132,44 @@ a#scroll-down-btn:hover:after {
   flex-direction: column;
   justify-content: center;
 }
-#about p{
-font-size: 26px;
+#about .avatar{
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: url(img/avatar.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
+#about p{
+  font-size: 26px;
+  color: #2c2c2c;
+}
+#about span.name{
+  position: relative;
+  z-index: 1;
+}
+#about span.name:after{
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 20px;
+  width: 0;
+  height: 20%;
+  background-color: #ffc000;
+  content: "";
+  transition: width 0.2s;
+  z-index: -1;
+}
+#about span.name:hover:after {
+  width: 100%;
+}
+
 /*WHAT I DO*/
+#what-i-do{
+  transform: translateY(0px);
+  transition: .4s linear;
+}
 #what-i-do .container {
   display: flex;
   flex-direction: column;
@@ -134,15 +178,103 @@ font-size: 26px;
 #what-i-do .box{
 width: 450px;
 }
-
 #what-i-do h3{
   font-size: 36px;
   font-weight: 500;
+  margin: 35px auto 0 0;
   color: #2c2c2c;
   margin-bottom: 0;
+  transition: .6s;
+}
+#what-i-do h3:first-child{
+  margin-top: 0;
 }
 #what-i-do p{
   font-size: 21px;
   color: #5d5d5d;
   margin-top: 0;
+}
+#what-i-do p:last-child{
+  margin-bottom: 0;
+}
+#what-i-do h3:hover{
+  color: white;
+  padding-left: 35px;
+  cursor: pointer;
+}
+sup {
+    font-size: .5em;
+    font-weight: 700;
+    padding-right: 5px;
+}
+
+/*FOOTER*/
+#contact .container-dos{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vh - 190px);
+  margin: 0 auto;
+  max-width: 920px;
+}
+#contact .container-dos p{
+  font-size: 26px;
+  color: #2c2c2c;
+}
+#contact .container-dos a{
+  font-size: 28px;
+  color: #2c2c2c;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0 auto 0 0;
+  position: relative;
+  z-index: 1;
+}
+#contact .container-dos a:after{
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 20px;
+  width: 0;
+  height: 20%;
+  background-color: #ffc000;
+  content: "";
+  transition: width 0.2s;
+  z-index: -1;
+}
+#contact .container-dos a:hover:after {
+  width: 100%;
+}
+
+#social{
+  width: 100%;
+  text-align: center;
+  height: 120px;
+  border-top: 1px solid #dddddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#social a{
+  color:#2c2c2c;
+  margin: 0 20px;
+  transition: all 200ms ease-in-out;
+  transition: all 350ms cubic-bezier(0.13, 0.43, 0.54, 1.82);
+}
+
+#social a:hover {
+  transform: scale(1.2);
+}
+footer{
+  width: 100%;
+  text-align: center;
+  height: 70px;
+  border-top: 1px solid #dddddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer i.fa-heart{
+color: #ff4848;
 }
