@@ -29,14 +29,68 @@ $('#scroll-down-btn').click(function (event) {
   jQuery('html, body').animate({ scrollTop: Position }, 1100);
   return false;
 });
+$('#scroll-to-top-btn').click(function (event) {
+  event.stopPropagation();
+  var Position = jQuery('[id="header"]').offset().top;
+  jQuery('html, body').animate({ scrollTop: Position }, 1100);
+  return false;
+});
 
 // Hover en Box What i do
 document.getElementById("box-id").addEventListener("mouseover", function() {
-  document.getElementById("what-i-do").style.background = "url(img/ci-bg.jpg)";
+  document.getElementById("what-i-do").style.backgroundColor = "#4B4B4D";
 }, false);
 document.getElementById("box-id").addEventListener("mouseout", function() {
    document.getElementById("what-i-do").style.background = "";
 }, false);
+document.getElementById("box-id").addEventListener("mouseover", function() {
+  document.getElementById("p-id").style.visibility = "visible";
+}, false);
+document.getElementById("box-id").addEventListener("mouseout", function() {
+   document.getElementById("p-id").style.visibility = "hidden";
+}, false);
+
+document.getElementById("box-ui").addEventListener("mouseover", function() {
+  document.getElementById("what-i-do").style.backgroundColor = "#4B4B4D";
+}, false);
+document.getElementById("box-ui").addEventListener("mouseout", function() {
+   document.getElementById("what-i-do").style.background = "";
+}, false);
+document.getElementById("box-ui").addEventListener("mouseover", function() {
+  document.getElementById("p-ui").style.visibility = "visible";
+}, false);
+document.getElementById("box-ui").addEventListener("mouseout", function() {
+   document.getElementById("p-ui").style.visibility = "hidden";
+}, false);
+
+document.getElementById("box-wd").addEventListener("mouseover", function() {
+  document.getElementById("what-i-do").style.backgroundColor = "#4B4B4D";
+}, false);
+document.getElementById("box-wd").addEventListener("mouseout", function() {
+   document.getElementById("what-i-do").style.background = "";
+}, false);
+document.getElementById("box-wd").addEventListener("mouseover", function() {
+  document.getElementById("p-wd").style.visibility = "visible";
+}, false);
+document.getElementById("box-wd").addEventListener("mouseout", function() {
+   document.getElementById("p-wd").style.visibility = "hidden";
+}, false);
+
+document.getElementById("box-ci").addEventListener("mouseover", function() {
+  document.getElementById("what-i-do").style.backgroundColor = "#4B4B4D";
+}, false);
+document.getElementById("box-ci").addEventListener("mouseout", function() {
+   document.getElementById("what-i-do").style.background = "";
+}, false);
+document.getElementById("box-ci").addEventListener("mouseover", function() {
+  document.getElementById("p-ci").style.visibility = "visible";
+}, false);
+document.getElementById("box-ci").addEventListener("mouseout", function() {
+   document.getElementById("p-ci").style.visibility = "hidden";
+}, false);
+
+
+
 
 // Active en li Items
 $('nav li a').on('click', function(){
